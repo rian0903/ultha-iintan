@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Intan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: url('image.jpg'); /* Ganti dengan URL foto Anda */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow: hidden;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        audio {
+            display: none;
+        }
+
+        /* Animasi bunga berjatuhan */
+        .falling {
+            position: fixed;
+            top: 0%;
+            animation: fall 8s linear infinite;
+            z-index: 10;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateX(calc(100vw * var(--i))) translateY(0%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(calc(100vw * var(--i))) translateY(120%);
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Efek bunga berjatuhan -->
+    <img src="flower.png" class="falling" style="--i: -0.2;" width="50" alt="Flower">
+    <img src="flower.png" class="falling" style="--i: 0.1;" width="40" alt="Flower">
+    <img src="flower.png" class="falling" style="--i: 0.5;" width="30" alt="Flower">
+    <img src="flower.png" class="falling" style="--i: -0.6;" width="60" alt="Flower">
+    <img src="flower.png" class="falling" style="--i: 0.7;" width="45" alt="Flower">
+    <img src="flower.png" class="falling" style="--i: -0.3;" width="35" alt="Flower">
+    <img src="flower.png" class="falling" style="--i: -0.5;" width="35" alt="Flower">
+    <img src="flower.png" class="falling" style="--i: -0.4;" width="35" alt="Flower">
+    <!-- Konten ucapan -->
+    <div class="content">
+        <h1>Selamat Ulang Tahun INTAN</h1>
+        <p>Maaf cuma bisa buat kaya gini doang</p>
+        <p>Ya, aku juga mau ikut ngucapin selamat ulang tahun buat kamu.</p>
+        <p>Dengan bertambahnya usia kamu, semoga segala sesuatu yang kamu harapkan akan segera tercapai.</p>
+        <p>Semoga kamu jadi orang yang lebih baik dari kamu yang baik sebelumnya.</p>
+        <p>Doa-doa ini semoga dikabulkan. Aamiin.</p>
+        <p>Jadi selamat ulang tahun buat kamu.</p>
+        <p>Untuk sekarang, aku cuma bisa buat kaya gini aja. Mudah-mudahan nanti bisa lebih.</p>
+        <audio autoplay loop>
+            <source src="sound.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung pemutar audio.
+        </audio>
+    </div>
+</body>
+</html>
